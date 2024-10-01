@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Tic Tac Toe</h1>
+    <div id="mode-selector" class="radio">
+        <input  type="radio" name="gameMode" value="single" id="single-player" checked="">
+        <label for="single-player">Single Player</label> 
+        <input type="radio" name="gameMode" value="multi" id="multi-player" >
+        <label for="multi-player">Multi Player</label>
+    </div>    
+    <button id="start"><p>Start Game</p></button>
+    <div id="game-result"></div>
+    <div id="game-board"></div>
+    <button id="restart" style="display: none;"><p>Restart?</p></button>
+    <script src="script.js"></script>
+</body>
+</html>

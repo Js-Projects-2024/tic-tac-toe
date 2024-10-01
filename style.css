@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+/* General body styling */
+body {
+    background-color: #01204E;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Title */
+h1 {
+    color: #F6DCAC;
+    font-size: 4rem;
+    font-family: "Rubik Vinyl", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    margin: 20px auto; 
+}
+
+/* Game mode selector */
+
+.radio{
+    margin: 5vh auto;
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+/* Hide default radio */
+.radio input[type="radio"] {
+    position: absolute;
+    visibility: hidden;
+    display: none;
+    opacity: 0;
+    z-index: -1;
+  }
+  
+  /* Customizing label */
+  .radio label {
+    position: relative;
+    padding: 10px 20px 10px 25px;
+    cursor: pointer;
+    border-radius: 20px;
+    color: #12bfd2;
+    margin: 0px 5px;
+    font-weight: 600;
+    
+  }
+  
+  .radio label, .radio label::before {
+    transition: .25s all ease;
+  }
+  
+  .radio label::before {
+    box-sizing: border-box;
+
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 1em;
+    height: 1em;
+    border: 2px solid #12bfd2;
+  }
+  
+  .radio input[type="radio"] + label::before {
+    border-radius: 1em;
+  }
+  
+  
+  /* Checked toggle */
+  .radio input[type="radio"]:checked + label {
+    color: #fff;
+    background: #12bfd2;
+    z-index: 1;
+  }
+  
+  .radio input[type="radio"]:checked + label {
+    padding: 10px 20px 10px 20px;
+  }
+  
+  .radio input[type="radio"]:checked + label::before {
+    top: 4px;
+    width: 100%;
+    height: 2em;
+    z-index: -1;
+  }
+  
+  .radio:hover input[type="radio"]:checked + label {
+    box-shadow: #21c6f338 0px 0px 0px 25px;
+  }
+
+/* Start and Restart buttons */
+ button {
+    padding: 0 5vh;
+    background-color: #FC5185;
+    border: none;
+    border-radius: 15px;
+    color: #F5F5F5;
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: 20px;
+}
+
+button:hover {
+    background-color: #f18dab;
+    transition: 0.3s ease;
+} 
+
+/* Hide restart button initially */
+#restart {
+    background-color: #f38a3a;
+    display: none;
+}
+#restart:hover{
+    background-color: #FEAE6F;
+}
+
+/* Game board layout */
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: #FC5185;
+    border: 2px solid  #01204E;
+    border-radius: 15px;
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Game result display */
+#game-result {
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #74eff6;
+    margin-top: 20px;
+}
